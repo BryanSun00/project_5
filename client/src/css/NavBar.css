@@ -1,0 +1,39 @@
+body{
+    background-color: #C8C8C8;
+}
+
+.navbar-item {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  display: inline-block;
+  padding: 12px;
+  text-decoration: none;
+  margin: 0 6px 6px;
+  color: black;
+  border-radius: 10px;
+  font-size: 20px;
+  font-family: sans-serif display;
+  font-weight: 125;
+}
+
+.navbar-item:hover {
+  color: #FFFFFF; /* Change the color of the links on hover */
+}
+
+.font-effect-3d-float{
+  color: black
+
+}
+
+
+
+button {
+  cursor: pointer;
+}
+.on {
+  color: gold
+}
+.off {
+  color: #ccc;
+}
