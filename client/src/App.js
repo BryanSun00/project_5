@@ -6,12 +6,14 @@ import NavBar from "./components/NavBar";
 import PostForm from "./components/PostForm";
 import UserPage from "./components/UserPage";
 import PostView from "./components/PostView";
-import LikePage from "./components/LikePage";
+import PostLike from "./components/PostLike"
+// import LikePage from "./components/LikePage";
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
   const [posts, setPosts] = useState([]);
   const [pID, setPID] = useState(null);
+  const [likes, setLikes] = useState([])
 
   useEffect(() => {
     fetch("/api/auth").then((r) => {
@@ -46,6 +48,8 @@ function App() {
               setPosts={setPosts}
               pID={pID}
               setPID={setPID}
+              likes={likes}
+              setLikes={setLikes}
             />
           }
         />
@@ -64,17 +68,13 @@ function App() {
         />
        <Route
           path="/posts/:id"
-
           element={
-            <>
-
             <PostView
               currentUser={currentUser}
               setCurrentUser={setCurrentUser}
               posts={posts}
               setPosts={setPosts}
             />
-            </>
           }
         />
         <Route
@@ -87,11 +87,15 @@ function App() {
           }
         />
         <Route
-          path="/like"
+          path="/likes"
           element={
-            <LikePage
+            <PostLike
               currentUser={currentUser}
               setCurrentUser={setCurrentUser}
+              posts={posts}
+              setPosts={setPosts}
+              likes={likes}
+              setLikes={setLikes}
             />
           }
         />

@@ -2,13 +2,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    margin: 0 auto;
+    width: 500px;
+    padding-left : 30px;
+    margin: 50px auto;
 }
 
 .post-form{
  background: white;
  border-radius: 10px;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ padding-right: 15px;    
 }
 
 .post-title{
@@ -16,22 +21,28 @@
     flex-direction: column;
     align-items: center;
     position: center;
-    padding: 0 0 20px 0;
-    border-bottom: 1px solid silver;
+    padding: 0 0 10px 0;
+    width: 100%;
+    font-size: 28px;
+    font-family: sans-serif display;
+    font-weight: 250; 
 }
 
 .post-label{
     position: relative;
-    border-bottom: 1px solid #000000;
-    margin: 20px 5px;
-    padding: 0 0 10px 0;
+    border: none;
+    width: 100%;
+    margin: -30px -30px 30px 0;
+    padding: 20px;
 }
 
 .post-input {
-    width: 50%;
+    margin-right: 15px;
+    width: 95%;
     padding: 10 10px;
     height: 40px;
     border: none;
+    border-bottom: 1px solid #ddd;
     background: none;
 }
 
@@ -39,7 +50,7 @@
 .post-button{
     align-items: center;
     margin: 10px 0 ; 
-    width: 80%;
+    width: 100%;
     height: 30px;
     border: 1px solid;
     background: #2691d9;
@@ -51,7 +62,7 @@
     outline: none; 
 }
 
-.post-button{
+/* .post-button{
     border-color: #2691d9;
     transition: .5s;
-}
+} */

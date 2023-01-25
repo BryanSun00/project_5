@@ -1,12 +1,7 @@
 Rails.application.routes.draw do
-  resources :users
-  resources :descriptions
-  resources :likes
-  resources :comments
-  resources :posts
   namespace :api do
    resources :descriptions, only: [:show, :update, :destroy, :create]
-   resources :likes, only: [:update, :destroy, :create]
+   resources :likes, only: [:index, :update, :destroy, :create]
    resources :comments, only: [:update, :destroy, :create]
    resources :posts, only: [:index, :show, :update, :create, :destroy]
    resources :users, only:[:index, :create, :show, :destroy,:update]

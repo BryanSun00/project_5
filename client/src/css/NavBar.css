@@ -1,15 +1,30 @@
 body{
-    background-color: #C8C8C8;
+    background-color: #e6e5e5;
+}
+
+.nav-bar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0px;
+}
+
+.navbar-pic{
+  width: auto;
+  height: auto;
+  max-width: 200px;
+  max-height: 200px;
 }
 
 .navbar-item {
   background-color: transparent;
+  align-items: right;
   border: none;
   outline: none;
   display: inline-block;
   padding: 12px;
   text-decoration: none;
-  margin: 0 6px 6px;
+  margin: 0 6px 0px;
   color: black;
   border-radius: 10px;
   font-size: 20px;
@@ -22,8 +37,10 @@ body{
 }
 
 .font-effect-3d-float{
-  color: black
-
+  padding-left: 25px;
+  color: black;
+  font-family: sans-serif display;
+  font-weight: 400;
 }
 
 

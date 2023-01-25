@@ -64,9 +64,10 @@ function PostForm({ currentUser, posts, setPosts, pID, setPID }) {
                     <h4 className="post-title">  New Post</h4>
 					<div>
 						<label className="post-label" htmlFor="name">
-							Name:
+						
 						</label>
 						<input
+							placeholder="Name:"
 							className="post-input"
 							type="text"
 							name="name"
@@ -76,9 +77,10 @@ function PostForm({ currentUser, posts, setPosts, pID, setPID }) {
 					</div>
 					<div>
 						<label className="post-label" htmlFor="age">
-							Image:
+						
 						</label>
 						<input
+						placeholder="Image:"
 							className="post-input"
 							type="text"
 							name="image"
@@ -88,9 +90,10 @@ function PostForm({ currentUser, posts, setPosts, pID, setPID }) {
 					</div>
 					<div>
 						<label className="post-label" htmlFor="username">
-							Description:
+							
 						</label>
 						<input
+						placeholder="Description:"
 							className="post-input"
 							type="text"
 							name="description"
@@ -100,9 +103,10 @@ function PostForm({ currentUser, posts, setPosts, pID, setPID }) {
 					</div>
 					<div>
 						<label className="post-label" htmlFor="password">
-							Tags:
+							
 						</label>
 						<input
+						placeholder="Tags:"
 							className="post-input"
 							type="text"
 							name="tags"

@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import "../css/PostComment.css"
 
 function PostComment({navigate, currentUser, pID}) {
 	const [comment, setComment] = useState("");
@@ -9,7 +10,7 @@ function PostComment({navigate, currentUser, pID}) {
 		const commentForm = {
 			user_id: currentUser.id,
 			post_id: pID,
-			comment: comment 
+			user_comment: comment 
 		}
 		console.log(commentForm)
 		fetch(`/api/comments`,{
@@ -30,16 +31,17 @@ function PostComment({navigate, currentUser, pID}) {
 	}
 
   return (
-		<div className="form">
+		<div className="comment-field">
 			<form onSubmit={handleSubmit}>
-				<textarea
+				<textarea className='comment-input'
 					onChange={(e) => setComment(e.target.value)}
 					placeholder="Comment"
 					value={comment}
+					required
 				></textarea>
 				<br />
 
-				<button className="button">Submit</button>
+				<button className="comment-button">Submit</button>
 			</form>
 			<div>
 			{!errors ? null : errors.map((error) => <p className="error" key={error}>{error}</p>)}

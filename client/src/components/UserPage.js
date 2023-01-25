@@ -61,23 +61,6 @@ function UserPage({ currentUser, setCurrentUser }) {
 		});
 	}
 
-	// function reviewMapped() {
-	// 	return currentUser.reviews.map((review) => (
-	// 		<ReviewCard
-	// 			id={review.id}
-	// 			review={review.review}
-	// 			rating={review.rating}
-	// 			reviewFor={review.review_for}
-	// 			key={Math.random() * 1000000}
-	// 		/>
-	// 	));
-	// }
-	// function recipeMapped() {
-	// 	return currentUser.recipes.map((recipe) => (
-	// 		<RecipeCard recipe={recipe} key={Math.random() * 1000000} />
-	// 	));
-	// }
-
 	return (
 		<div className="New-user-card">
 			<br />
@@ -101,9 +84,10 @@ function UserPage({ currentUser, setCurrentUser }) {
                 </div>
 				<div>
 					<label className="user-label" htmlFor="name">
-						Name:
+						
 					</label>
 					<input
+					placeholder="Name:"
 						className="user-input"
 						type="text"
 						name="name"
@@ -114,9 +98,10 @@ function UserPage({ currentUser, setCurrentUser }) {
 		
 				<div>
 					<label className="user-label" htmlFor="username">
-						Username:
+						
 					</label>
 					<input
+					placeholder="Username:"
 						className="user-input"
 						type="text"
 						name="username"
@@ -126,9 +111,10 @@ function UserPage({ currentUser, setCurrentUser }) {
 				</div>
 				<div>
 					<label className="user-label" htmlFor="password">
-						Password:
+						
 					</label>
 					<input
+					placeholder="Password:"
 						className="user-input"
 						type="password"
 						name="password"
@@ -138,18 +124,10 @@ function UserPage({ currentUser, setCurrentUser }) {
 				</div>
 
 				<div>
-					<input className="user-button" type="submit" />
+					<input className="user-button" type="submit" name="update"/>
 				</div>
 			</form>
 			<br />
-			<div className="parent-div">
-				<div className="container">
-					{/* <div>{reviewMapped()}</div> */}
-				</div>
-				<div className="container">
-					{/* <div>{recipeMapped()}</div> */}
-				</div>
-			</div>
 		</div>
 	);
 }

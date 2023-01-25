@@ -2,8 +2,7 @@ import React, {useEffect}  from 'react'
 import Post from "./Post"
 import "../css/PostPage.css"
 
-function PostPage({posts, setPosts , pID, setPID}) {
-
+function PostPage({posts, setPosts , pID, setPID,likes, setLikes, currentUser}) {
 
     useEffect(() => {
       fetch("/api/posts").then((r) => {
@@ -16,11 +15,11 @@ function PostPage({posts, setPosts , pID, setPID}) {
 
     function createPostCards(){
       if (posts){
-      return posts.map(post => <Post key={post.id} post={post} pID={pID} setPID={setPID}/>)
+      return posts.map(post => <Post key={post.id} post={post} pID={pID} setPID={setPID} likes={likes} setLikes={setLikes} currentUser={currentUser}/>)
     }}
 
   return (
-    <div className="post-card">
+    <div className="post-cards">
       {createPostCards()}
     </div>
   )

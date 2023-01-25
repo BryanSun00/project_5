@@ -1,4 +1,27 @@
-body{
-    align-content: center;
-    padding: 40px ; 
+.post-view{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: auto;
+    margin: 30px 30px;
+    padding-left: 30px;
+    background-color: rgba(181, 177, 155,0.25)
+}
+
+.post-header{
+
+}
+
+.post-description{
+
+}
+
+.post-view-detail{
+    display: flex;
+    flex-direction: row;
+  
+}
+
+.post-content{
+    padding-right: 10px;
 }

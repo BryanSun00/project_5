@@ -11,6 +11,7 @@ function CommentCard({comment}) {
     <div>
         <p>
             {comment.user_comment}
+            {comment.user_name}
         </p>
         {/* {!reviewFor ? null : <button className="delete-button" onClick={handleDelete}> Delete </button>} */}
     </div>

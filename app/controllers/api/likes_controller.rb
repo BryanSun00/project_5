@@ -1,7 +1,11 @@
 class Api::LikesController < ApplicationController
+    def index
+        render json: Like.all
+    end
+    
     def create
         like = Like.create!(like_params)
-        render json: like
+        render json: like, status: :created
     end
 
     def destroy
@@ -13,6 +17,6 @@ class Api::LikesController < ApplicationController
     private
 
     def like_params
-        params.permit(:user_id, :recipe_id)
+        params.permit(:user_id, :post_id)
     end
 end
